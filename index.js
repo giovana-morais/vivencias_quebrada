@@ -6,9 +6,22 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
-// TODO: ler de um arquivo em vez de adicionar os tooltips manualmente.
-// idealmente, um .yml ou algo que a Ana possa popular.
-// vou pensar na estrutura
-L.marker([-23.5420, -46.4710]).addTo(map).bindPopup("Texto de teste<br><img src='dados/corinthians_itaquera.jpeg' width='200' height='300'/>");
-L.marker([-23.5757, -46.4104]).addTo(map).bindPopup("Texto de teste<br><img src='dados/quadra.jpeg' width='200' height='300'/>");
-L.marker([-23.5679, -46.4189]).addTo(map).bindPopup("Texto de teste<br><img src='dados/riacho.jpeg' width='200' height='300'/>");
+// le dados do arquivo dados.json
+fetch("dados.json")
+	.then(response => {
+		if (!response.ok) {
+			throw new Error("Erro carregando arquivo de dados");
+		}
+		return response.json();
+	})
+	.then(data => {
+		console.log(data);
+		for (const obj in data) {
+			console.log(data[obj]);
+			console.log(data[obj].img);
+			L.marker([data[obj].latitude, data[obj].longitude]).addTo(map).bindPopup(`Texto de teste<br><img src='${data[obj].img}' width='200' height='300'/>`);
+		}
+	})
+	.then(error => {
+		console.error("Erro", error);
+	});

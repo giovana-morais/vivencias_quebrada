@@ -1,0 +1,18 @@
+[
+	{
+		"img": "dados/conrinthians_itaquera.jpeg",
+		"audio": "test",
+		"latitude": -23.5420,
+		"longitude": -46.710
+	}, {
+		"img": "dados/quadra.jpeg",
+		"audio": "test",
+		"latitude": -23.5757,
+		"longitude": -46.4104
+	}, {
+		"img": "dados/riacho.jpeg",
+		"audio": "test",
+		"latitude": -23.5679,
+		"longitude": -46.4189
+	}
+]
