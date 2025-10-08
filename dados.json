@@ -1,18 +1,21 @@
 [
 	{
-		"img": "dados/conrinthians_itaquera.jpeg",
-		"audio": "test",
+		"img": "dados/corinthians_itaquera.jpeg",
+		"audio": "dados/corinthians_itaquera.wav",
 		"latitude": -23.5420,
-		"longitude": -46.710
+		"longitude": -46.710,
+		"texto": "Essa é uma estação de metrô."
 	}, {
 		"img": "dados/quadra.jpeg",
-		"audio": "test",
+		"audio": "dados/riacho.wav",
 		"latitude": -23.5757,
-		"longitude": -46.4104
+		"longitude": -46.4104,
+		"texto": "Essa é uma quadra assim, assim e assado."
 	}, {
 		"img": "dados/riacho.jpeg",
-		"audio": "test",
+		"audio": "dados/riacho.wav",
 		"latitude": -23.5679,
-		"longitude": -46.4189
+		"longitude": -46.4189,
+		"texto": "Lindo riacho"
 	}
 ]
