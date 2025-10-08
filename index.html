@@ -6,20 +6,43 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Vivências Quebrada</title>
 		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" >
+		<style>
+		/* remove defaults do pico pra usar o do leaflet */
+		[role=button],button,input[type=button],input[type=reset],input[type=submit]{
+				--background-color:none;
+				--border-color:none;
+				padding: 0px 0px;;
+
+			}
+
+			[role=button]:is([aria-current],:hover,:active,:focus),button:is([aria-current],:hover,:active,:focus),input[type=button]:is([aria-current],:hover,:active,:focus),input[type=reset]:is([aria-current],:hover,:active,:focus),input[type=submit]:is([aria-current],:hover,:active,:focus){
+				--background-color:none;
+				--border-color:none;
+			}
+		</style>
 		<link rel="stylesheet"
-			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-			integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-			crossorigin=""/>
-		 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-						 integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-						 crossorigin=""></script>
-		<!-- <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
+					href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+					integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+					crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+						integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+						crossorigin=""></script>
 	</head>
-	<body>
-		<main>
-			<h2>Vivências Quebrada</h2>
-			<div id="map"></map>
+	<body id="body-mapa">
+		<nav class="container-fluid">
+			<ul>
+				<li><strong><a href="index.html">Vivências Quebrada</a></strong></li>
+			</ul>
+			<ul>
+				<li><a href="sobre.html">Sobre o projeto</a></li>
+			</ul>
+		</nav>
+
+		<main id="main-mapa">
+			<div id="map"></div>
 		</main>
+
 		<script src="index.js"></script>
 	</body>
 </html>
