@@ -18,10 +18,22 @@ fetch("dados.json")
 		console.log(data);
 		for (const obj in data) {
 			console.log(data[obj]);
-			console.log(data[obj].img);
-			L.marker([data[obj].latitude, data[obj].longitude]).addTo(map).bindPopup(`Texto de teste<br><img src='${data[obj].img}' width='200' height='300'/>`);
+
+			// The content for the popup, now including the audio player
+			const popupContent = `
+				${data[obj].texto}<br>
+				<img src='${data[obj].img}' width='200' style='max-width:100%; height:auto; margin-top:5px; margin-bottom:5px;'/>
+				<br>
+				<audio controls src="${data[obj].audio}" style="width: 100%;">
+					Your browser does not support the audio element.
+				</audio>
+			`;
+
+			L.marker([data[obj].latitude, data[obj].longitude])
+			 .addTo(map)
+			 .bindPopup(popupContent);
 		}
 	})
-	.then(error => {
-		console.error("Erro", error);
+	.catch(error => { // Corrected error handling
+		console.error("Erro:", error);
 	});

@@ -1,1 +1,22 @@
-#map { height: 500px; }
+/* Fazendo o mapa usar todo o espaço disponível */
+#body-mapa {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+#main-mapa {
+	flex-grow: 1;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#map {
+	/* /1* aqui a gente mantém só as classes do leaflet pro que estiver dentro do mapa *1/ */
+	/* all: revert; */
+	height: 100%;
+	width: 100%;
+}
