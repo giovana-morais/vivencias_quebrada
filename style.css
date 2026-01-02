@@ -15,8 +15,27 @@
 }
 
 #map {
-	/* /1* aqui a gente mantém só as classes do leaflet pro que estiver dentro do mapa *1/ */
+	/* aqui a gente mantém só as classes do leaflet pro que estiver dentro do mapa */
 	/* all: revert; */
 	height: 100%;
 	width: 100%;
 }
+
+/* define o tamanho do popup 0/* Targets the Leaflet popup content wrapper */
+.responsive-popup .leaflet-popup-content {
+    width: 60vw !important; /* 40% of viewport width */
+    margin: 10px;
+}
+/* .leaflet-popup-content { */
+/*     text-align: center; /* Centers the text and the audio player */ */
+/*     display: flex; */
+/*     flex-direction: column; */
+/*     align-items: center; */
+/* } */
+
+/* Mobile adjustment: On small screens, 40% is too tiny, so let's use 80% */
+@media (max-width: 768px) {
+    .responsive-popup .leaflet-popup-content {
+        width: 80vw !important;
+    }
+}*/
