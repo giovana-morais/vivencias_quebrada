@@ -1,10 +1,30 @@
-var map = L.map('map').setView([-23.55, -46.47], 13);
+var map = L.map('map').setView([-23.55, -46.47], 10);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-	crossOrigin: true
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    crossOrigin: true
 }).addTo(map);
 
+const city = "Guaianases";
+
+fetch("dados/guaianases.geojson")
+    .then(r => r.json())
+    .then(g => {
+        const layer = L.geoJSON(g, {
+            style: { color: 'red', weight: 1.5, fillOpacity: 0.1 }
+        }).addTo(map);
+        map.fitBounds(layer.getBounds());
+    });
+
+// fetch(`https://nominatim.openstreetmap.org/search?format=json&polygon_geojson=1&q=${encodeURIComponent(city)}`)
+//     .then(r => r.json())
+//     .then(data => {
+//         const geojson = data[0].geojson;
+//         const layer = L.geoJSON(geojson, {
+//         }).addTo(map);
+//         map.fitBounds(layer.getBounds());
+//     });
+//
 
 // le dados do arquivo dados.json
 fetch("dados.json")
@@ -19,7 +39,7 @@ fetch("dados.json")
 		for (const obj in data) {
 			console.log(data[obj]);
 
-			// The content for the popup, now including the audio player
+			// popula conteúdo do popup
 			const popupContent = `
 				${data[obj].texto}<br>
 				<img src='${data[obj].img}' width='200' style='max-width:100%; height:auto; margin-top:5px; margin-bottom:5px;'/>
