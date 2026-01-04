@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivências Quebrada – Mapas</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+    <style>
+      #map {
+        height: 70vh;
+        border-radius: 0.5rem;
+      }
+      .map-selector {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="container-fluid">
+      <ul>
+        <li><strong><a href="index.html">Vivências Quebrada</a></strong></li>
+      </ul>
+      <ul>
+        <li><a href="sobre.html">Sobre o projeto</a></li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <h2>Mapas de Guaianases</h2>
+
+      <div class="map-selector">
+        <button onclick="showOverlay('cor')">cor</button>
+        <button onclick="showOverlay('favelas')">favelas</button>
+        <button onclick="showOverlay('ipvs')">ipvs</button>
+        <button onclick="showOverlay('lotes')">lotes</button>
+        <button onclick="showOverlay('rios')">rios</button>
+      </div>
+
+      <div id="map"></div>
+    </main>
+
+    <script>
+      // Inicializa o mapa (ajuste centro/zoom conforme necessário)
+      const map = L.map('map').setView([-23.55, -46.47], 13);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+      }).addTo(map);
+
+      // Bounds genéricos (AJUSTE para os limites reais das imagens)
+      const bounds = [
+        [-23.60, -46.55], // sudoeste
+        [-23.50, -46.40]  // nordeste
+      ];
+
+      const overlays = {
+        cor: L.imageOverlay('mapas_guaianases/guaianases_cor.png', bounds),
+        favelas: L.imageOverlay('mapas_guaianases/guaianases_favelas.png', bounds),
+        ipvs: L.imageOverlay('mapas_guaianases/guaianases_ipvs.png', bounds),
+        lotes: L.imageOverlay('mapas_guaianases/guaianases_lotes.png', bounds),
+        rios: L.imageOverlay('mapas_guaianases/guaianases_rios.png', bounds)
+      };
+
+      let activeOverlay = null;
+
+      function showOverlay(key) {
+        if (activeOverlay) {
+          map.removeLayer(activeOverlay);
+        }
+        activeOverlay = overlays[key];
+        activeOverlay.addTo(map);
+      }
+
+      // Overlay inicial
+      showOverlay('cor');
+    </script>
+		<script src="index.js"></script>
+  </body>
+</html>
