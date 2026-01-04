@@ -4,10 +4,10 @@ import re
 
 def dms_to_decimal(dms_str):
     """
-    Converts a string like 46°25'5.01"O to decimal -46.418058.
-    Handles 'O' (Oeste/West) and 'S' (Sul/South) as negative values.
+    Converte lat/lon (46°25'5.01"O) em graus pra decimal (-46.418058).
+    Lida com 'O' (Oeste) e 'S' (Sul) como valores negativos.
     """
-    # Regex to find degrees, minutes, seconds, and direction
+    # Regex pra identificar graus, minutos e segundos + a direção  
     parts = re.match(r"(\d+)°(\d+)'([\d.]+)\"([A-Z])", dms_str)
     if not parts:
         return None
@@ -56,7 +56,8 @@ def convert_csv_to_json(input_file, output_file):
         json.dump(data_list, f, indent=4, ensure_ascii=False)
 
 if __name__ == "__main__":
-    nome_arquivo_saida = "../dados_teste.json"
-    convert_csv_to_json('input.csv', nome_arquivo_saida)
-    print(f"Dados convertidos. Resultados em {nome_arquivo_saida}")
+    arquivo_entrada = "input.csv"
+    arquivo_saida = "../dados.json"
+    convert_csv_to_json(arquivo_entrada, arquivo_saida)
+    print(f"Dados convertidos. Resultados em {arquivo_saida}")
 

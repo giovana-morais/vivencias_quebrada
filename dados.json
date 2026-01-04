@@ -1,21 +1,97 @@
 [
-	{
-		"img": "dados/corinthians_itaquera.jpeg",
-		"audio": "dados/corinthians_itaquera.wav",
-		"latitude": -23.5420,
-		"longitude": -46.710,
-		"texto": "Essa é uma estação de metrô."
-	}, {
-		"img": "dados/quadra.jpeg",
-		"audio": "dados/riacho.wav",
-		"latitude": -23.5757,
-		"longitude": -46.4104,
-		"texto": "Essa é uma quadra assim, assim e assado."
-	}, {
-		"img": "dados/riacho.jpeg",
-		"audio": "dados/riacho.wav",
-		"latitude": -23.5679,
-		"longitude": -46.4189,
-		"texto": "Lindo riacho"
-	}
+    {
+        "img": "dados/pedreira_lageado.jpg",
+        "audio": "dados/aguas_pedreira.wav",
+        "latitude": -23.555458,
+        "longitude": -46.418058,
+        "texto": "Pedreira Lageado",
+        "categoria": "Local"
+    },
+    {
+        "img": "dados/ceu_jambeiro.jpg",
+        "latitude": -23.539197,
+        "longitude": -46.422675,
+        "texto": "CEU Jambeiro",
+        "categoria": "Local"
+    },
+    {
+        "img": "dados/em_construcao.jpg",
+        "audio": "dados/pedreiros.wav",
+        "latitude": -23.538511,
+        "longitude": -46.420486,
+        "texto": "Pedreiros",
+        "categoria": "Local"
+    },
+    {
+        "img": "dados/feira_pagar.jpg",
+        "audio": "dados/feira_livre_guaianases.wav",
+        "latitude": -23.538814,
+        "longitude": -46.413044,
+        "texto": "Feira - pagar",
+        "categoria": "Local"
+    },
+    {
+        "img": "dados/feira_lutar.jpg",
+        "audio": "dados/feira_livre_guaianases.wav",
+        "latitude": -23.538519,
+        "longitude": -46.412258,
+        "texto": "Feira - lutar",
+        "categoria": "Local"
+    },
+    {
+        "img": "dados/nos_trilhos.jpg",
+        "audio": "dados/bem_vindo_a_guaianases.wav",
+        "latitude": -23.542319,
+        "longitude": -46.415611,
+        "texto": "Nos trilhos",
+        "categoria": "Local"
+    },
+    {
+        "img": "dados/ee_guerra.jpg",
+        "audio": "dados/guerra_capoeira.wav",
+        "latitude": -23.564647,
+        "longitude": -46.393831,
+        "texto": "EE Guerra Junqueiro",
+        "categoria": "Local"
+    },
+    {
+        "img": "dados/ee_cosme.jpg",
+        "audio": "dados/jogo_major.wav",
+        "latitude": -23.538622,
+        "longitude": -46.419306,
+        "texto": "EE Cosme de Faria Major",
+        "categoria": "Local"
+    },
+    {
+        "img": "dados/jogo_major.jpg",
+        "audio": "dados/jogo_major.wav",
+        "latitude": -23.538622,
+        "longitude": -46.419306,
+        "texto": "EE Cosme de Faria Major",
+        "categoria": "Local"
+    },
+    {
+        "img": "dados/varzea.png",
+        "audio": "dados/.wav",
+        "latitude": -23.537992,
+        "longitude": -46.423108,
+        "texto": "Varzea",
+        "categoria": "Local"
+    },
+    {
+        "img": "dados/churrasco",
+        "audio": "dados/ze_vaqueiro.wav",
+        "latitude": -23.538467,
+        "longitude": -46.419772,
+        "texto": "",
+        "categoria": "Festa"
+    },
+    {
+        "img": "dados/festa",
+        "audio": "dados/funk_moto.wav",
+        "latitude": -23.538036,
+        "longitude": -46.42015,
+        "texto": "",
+        "categoria": "Festa"
+    }
 ]

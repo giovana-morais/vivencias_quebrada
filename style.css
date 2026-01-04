@@ -36,6 +36,6 @@
 /* Mobile adjustment: On small screens, 40% is too tiny, so let's use 80% */
 @media (max-width: 768px) {
     .responsive-popup .leaflet-popup-content {
-        width: 80vw !important;
+        width: 60vw !important;
     }
 }*/

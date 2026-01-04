@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vivências Quebrada – Mapas</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+    <style>
+      .map-selector {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+      .map-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="container-fluid">
+      <ul>
+        <li><strong><a href="index.html">Vivências Quebrada</a></strong></li>
+      </ul>
+      <ul>
+        <li><a href="guaianacity.html">GuaianaCity</a></li>
+      </ul>
+      <ul>
+        <li><a href="sobre.html">Sobre o projeto</a></li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <h2>Mapas de Guaianases</h2>
+
+      <div class="map-selector">
+        <button onclick="loadMap('cor')">cor</button>
+        <button onclick="loadMap('favelas')">favelas</button>
+        <button onclick="loadMap('ipvs')">ipvs</button>
+        <button onclick="loadMap('lotes')">lotes</button>
+        <button onclick="loadMap('rios')">rios</button>
+      </div>
+
+      <div class="map-container">
+        <img id="mapImage" src="mapas_guaianases/guaianases_cor.png" alt="Mapa de Guaianases">
+      </div>
+    </main>
+
+    <script>
+      const mapPaths = {
+        cor: "mapas_guaianases/guaianases_cor.png",
+        favelas: "mapas_guaianases/guaianases_favelas.png",
+        ipvs: "mapas_guaianases/guaianases_ipvs.png",
+        lotes: "mapas_guaianases/guaianases_lotes.png",
+        rios: "mapas_guaianases/guaianases_rios.png"
+      };
+
+      function loadMap(type) {
+        const img = document.getElementById("mapImage");
+        img.src = mapPaths[type];
+        img.alt = `Mapa de Guaianases – ${type}`;
+      }
+    </script>
+  </body>
+</html>
