@@ -1,5 +1,21 @@
 [
     {
+        "img": "dados/igreja_santa_cruz.jpg",
+        "audio": "dados/",
+        "latitude": -23.545786,
+        "longitude": -46.411211,
+        "texto": "Igreja Santa Cruz",
+        "categoria": "Local"
+    },
+    {
+        "img": "dados/guanaiases_terra_vermelha.jpg",
+        "audio": "dados/pescada.wav",
+        "latitude": -23.555458,
+        "longitude": -46.413575,
+        "texto": "Guaianases: terra vermelha",
+        "categoria": "Local"
+    },
+    {
         "img": "dados/pedreira_lageado.jpg",
         "audio": "dados/aguas_pedreira.wav",
         "latitude": -23.555458,
@@ -8,7 +24,7 @@
         "categoria": "Local"
     },
     {
-        "img": "dados/ceu_jambeiro.jpg",
+        "img": "dados/guaianacity_um_mundo.jpg",
         "latitude": -23.539197,
         "longitude": -46.422675,
         "texto": "CEU Jambeiro",
@@ -19,7 +35,7 @@
         "audio": "dados/pedreiros.wav",
         "latitude": -23.538511,
         "longitude": -46.420486,
-        "texto": "Pedreiros",
+        "texto": "Moradia: um sonho sem teto",
         "categoria": "Local"
     },
     {
@@ -27,7 +43,7 @@
         "audio": "dados/feira_livre_guaianases.wav",
         "latitude": -23.538814,
         "longitude": -46.413044,
-        "texto": "Feira - pagar",
+        "texto": "A Rua da Feira",
         "categoria": "Local"
     },
     {
@@ -35,7 +51,7 @@
         "audio": "dados/feira_livre_guaianases.wav",
         "latitude": -23.538519,
         "longitude": -46.412258,
-        "texto": "Feira - lutar",
+        "texto": "A xepa",
         "categoria": "Local"
     },
     {
@@ -71,19 +87,11 @@
         "categoria": "Local"
     },
     {
-        "img": "dados/varzea.png",
-        "audio": "dados/.wav",
-        "latitude": -23.537992,
-        "longitude": -46.423108,
-        "texto": "Varzea",
-        "categoria": "Local"
-    },
-    {
         "img": "dados/churrasco",
         "audio": "dados/ze_vaqueiro.wav",
         "latitude": -23.538467,
         "longitude": -46.419772,
-        "texto": "",
+        "texto": "Alegria: uma herança afrodiaspórica",
         "categoria": "Festa"
     },
     {
