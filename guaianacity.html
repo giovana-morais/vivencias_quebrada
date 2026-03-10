@@ -1,72 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vivências Quebrada – Mapas</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Vivências Quebrada</title>
+		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" >
+		<style>
+		/* remove defaults do pico pra usar o do leaflet */
+		[role=button],button,input[type=button],input[type=reset],input[type=submit]{
+				--background-color:none;
+				--border-color:none;
+				padding: 0px 0px;;
 
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+			}
 
-    <style>
-      .map-selector {
-        display: flex;
-        gap: 0.5rem;
-        flex-wrap: wrap;
-        margin-bottom: 1rem;
-      }
-      .map-container img {
-        width: 100%;
-        height: auto;
-        border-radius: 0.5rem;
-      }
-    </style>
-  </head>
+			[role=button]:is([aria-current],:hover,:active,:focus),button:is([aria-current],:hover,:active,:focus),input[type=button]:is([aria-current],:hover,:active,:focus),input[type=reset]:is([aria-current],:hover,:active,:focus),input[type=submit]:is([aria-current],:hover,:active,:focus){
+				--background-color:none;
+				--border-color:none;
+			}
+		</style>
+		<link rel="stylesheet"
+					href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+					integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+					crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+						integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+						crossorigin=""></script>
+	</head>
+	<body id="body-mapa">
+		<nav class="container-fluid">
+			<ul>
+				<li><a href="index.html">Sobre o projeto</a></li>
+                <li><a href="guaianacity.html">GuaianaCity</a></li>
+                <li><a href="memorias_quebrada.html">Memórias Quebrada</a></li>
+                <li><a href="cartografia.html">A cartografia negra de Guianases</a></li>
+			</ul>
+		</nav>
 
-  <body>
-    <nav class="container-fluid">
-      <ul>
-        <li><strong><a href="index.html">Vivências Quebrada</a></strong></li>
-      </ul>
-      <ul>
-        <li><a href="guaianacity.html">GuaianaCity</a></li>
-      </ul>
-      <ul>
-        <li><a href="sobre.html">Sobre o projeto</a></li>
-      </ul>
-    </nav>
+		<main id="main-mapa">
+			<div id="map"></div>
+		</main>
 
-    <main class="container">
-      <h2>Mapas de Guaianases</h2>
-
-      <div class="map-selector">
-        <button onclick="loadMap('cor')">cor</button>
-        <button onclick="loadMap('favelas')">favelas</button>
-        <button onclick="loadMap('ipvs')">ipvs</button>
-        <button onclick="loadMap('lotes')">lotes</button>
-        <button onclick="loadMap('rios')">rios</button>
-      </div>
-
-      <div class="map-container">
-        <img id="mapImage" src="mapas_guaianases/guaianases_cor.png" alt="Mapa de Guaianases">
-      </div>
-    </main>
-
-    <script>
-      const mapPaths = {
-        cor: "mapas_guaianases/guaianases_cor.png",
-        favelas: "mapas_guaianases/guaianases_favelas.png",
-        ipvs: "mapas_guaianases/guaianases_ipvs.png",
-        lotes: "mapas_guaianases/guaianases_lotes.png",
-        rios: "mapas_guaianases/guaianases_rios.png"
-      };
-
-      function loadMap(type) {
-        const img = document.getElementById("mapImage");
-        img.src = mapPaths[type];
-        img.alt = `Mapa de Guaianases – ${type}`;
-      }
-    </script>
-  </body>
+		<script src="index.js"></script>
+	</body>
 </html>
