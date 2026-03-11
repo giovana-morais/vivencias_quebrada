@@ -33,3 +33,85 @@
         width: 80vw !important;
     }
 }
+
+
+
+/* remove o quadrado feio do pico CSS dos markers do leaflet */
+.leaflet-container img {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.leaflet-marker-icon {
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
+}
+
+/* Ensure no default styles affect markers */
+.leaflet-marker-icon::before,
+.leaflet-marker-icon::after {
+    display: none !important;
+}
+
+/* Remove any Pico defaults from images */
+img:not([class*="leaflet"]) {
+    /* Keep Pico styles for non-map images if needed */
+}
+
+/* ========================================================  */
+
+
+/* Custom marker styles */
+.custom-marker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.custom-marker::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+}
+
+.marker-local {
+    background: #FF6B6B; /* Coral/Red */
+}
+
+.marker-festa {
+    background: #4ECDC4; /* Turquoise */
+}
+
+.marker-trabalho {
+    background: #FFD93D; /* Yellow */
+}
+
+/* Ensure custom markers aren't affected by Pico */
+.custom-marker {
+    all: initial;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50% 50% 50% 0 !important;
+    transform: rotate(-45deg) !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3) !important;
+}
+
+.custom-marker * {
+    all: unset;
+}

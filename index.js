@@ -1,4 +1,4 @@
-var map = L.map('map').setView([-23.55, -46.47], 13);
+var map = L.map('map').setView([-23.545, -46.411], 14);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -24,7 +24,7 @@ fetch("dados.json")
             // if (data[obj].categoria === "Local") {
             // popula conteúdo do popup
             const popupContent = `
-                ${data[obj].texto}<br>
+                <h4>${data[obj].texto}</h4><br>
                 <div style="width: 100%"; max-height: 60vh; overflow: hidden; display: flex; justify-content: center; margin: 5px 0;">
                     <img src='${data[obj].img}' 
                     style='width:100%; height: auto; object-fit: contain; max-height: 50vh;'
