@@ -6,18 +6,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 const city = "Guaianases";
-// adiciona contorno da cidade (comentando pq parece errado por eqnuanto)
-// fetch("dados/guaianases.geojson")
-//     .then(r => r.json())
-//     .then(g => {
-//         const layer = L.geoJSON(g, {
-//             style: { color: 'red', weight: 1.5, fillOpacity: 0.1 }
-//         }).addTo(map);
-//         map.fitBounds(layer.getBounds());
-//     });
-//
 
-// le dados do arquivo dados.jso
+// le dados do arquivo dados.json
 fetch("dados.json")
 	.then(response => {
 		if (!response.ok) {
@@ -31,55 +21,36 @@ fetch("dados.json")
 			console.log(data[obj]);
 
             // por enquanto nada acontece com os pontos que não forem da categoria "local"
-            if (data[obj].categoria === "Local") {
-                // popula conteúdo do popup
-                const popupContent = `
-                    ${data[obj].texto}<br>
-                    <img src='${data[obj].img}' style='width:100%; max-height:400px; object-fit: cover; margin-top:5px; margin-bottom:5px;'/>
-                    <br>
-                    <audio controls src="${data[obj].audio}" style="width: 100%;">
-                        Seu navegador não suporta áudio.
-                    </audio>
-                `;
+            // if (data[obj].categoria === "Local") {
+            // popula conteúdo do popup
+            const popupContent = `
+                ${data[obj].texto}<br>
+                <div style="width: 100%"; max-height: 60vh; overflow: hidden; display: flex; justify-content: center; margin: 5px 0;">
+                    <img src='${data[obj].img}' 
+                    style='width:100%; height: auto; object-fit: contain; max-height: 50vh;'
+                    onload="this.style.opacity=1"
+                    onerror="this.style.display='none'" />
+                </div>
+                <br>
+                <audio controls src="${data[obj].audio}" style="width: 100%; margin-top: 5px;">
+                    Seu navegador não suporta áudio.
+                </audio>
+            `;
 
-                L.marker([data[obj].latitude, data[obj].longitude])
-                 .addTo(map)
-                 .bindPopup(popupContent, 
-                     // configs extras
-                     {
-                         className: "responsive-popup",
-                         autoPan: true,
-                         autoPanPadding: L.point(10, 10), // espaço entre o popup e a borda
-                         keepInView: true
-                     });
-            }
+            L.marker([data[obj].latitude, data[obj].longitude])
+             .addTo(map)
+             .bindPopup(popupContent, 
+                 // configs extras
+                 {
+                     className: "responsive-popup",
+                     autoPan: true,
+                     autoPanPadding: L.point(10, 10), // espaço entre o popup e a borda
+                     keepInView: true
+                 });
+            // }
         }
     })
     .catch(error => { 
         console.error("Erro:", error);
     });
 
-// centraliza a tela baseado no tamanho da imagem
-// map.on('popupopen', function(e) {
-//     console.log("popup abrindo");
-//     // 1. Get the geographical coordinates of the marker
-//     const targetLatLng = e.popup.getLatLng();
-//
-//     // 2. Get the height of the actual popup element in pixels
-//     const popupHeight = e.popup._container.clientHeight;
-//     console.log("popupHeight", popupHeight);
-//
-//     // 3. Convert the latlng to a point (pixels) to do math
-//     const targetPoint = map.project(targetLatLng);
-//
-//     // 4. Subtract half the popup height from the y-coordinate
-//     // This shifts the "center" point upward so the content lands in the middle
-//     targetPoint.y -= popupHeight / 2;
-//
-//     // 5. Convert the pixel point back to LatLng and pan to it
-//     const targetCenter = map.unproject(targetPoint);
-//
-//     map.panTo(targetCenter, { animate: true });
-// });
-
-// adiciona uma pequena descrição ao mapa

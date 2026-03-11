@@ -1,21 +1,5 @@
 [
     {
-        "img": "dados/igreja_santa_cruz.jpg",
-        "audio": "dados/",
-        "latitude": -23.545786,
-        "longitude": -46.411211,
-        "texto": "Igreja Santa Cruz",
-        "categoria": "Local"
-    },
-    {
-        "img": "dados/guaianases_terra_vermelha.jpg",
-        "audio": "dados/pescada.wav",
-        "latitude": -23.555458,
-        "longitude": -46.413575,
-        "texto": "Guaianases: terra vermelha",
-        "categoria": "Local"
-    },
-    {
         "img": "dados/pedreira_lageado.jpg",
         "audio": "dados/aguas_pedreira.wav",
         "latitude": -23.555458,
@@ -25,9 +9,10 @@
     },
     {
         "img": "dados/guaianacity_um_mundo.jpg",
+        "audio": "dados/.wav",
         "latitude": -23.539197,
         "longitude": -46.422675,
-        "texto": "CEU Jambeiro",
+        "texto": "GuaianaCity: um mundo",
         "categoria": "Local"
     },
     {
@@ -39,7 +24,7 @@
         "categoria": "Local"
     },
     {
-        "img": "dados/feira_pagar.jpg",
+        "img": "dados/feira_pagar.png",
         "audio": "dados/feira_livre_guaianases.wav",
         "latitude": -23.538814,
         "longitude": -46.413044,
@@ -87,7 +72,23 @@
         "categoria": "Local"
     },
     {
-        "img": "dados/churrasco",
+        "img": "dados/",
+        "audio": "dados/funk.wav",
+        "latitude": -23.569861,
+        "longitude": -46.412239,
+        "texto": "",
+        "categoria": "Festa"
+    },
+    {
+        "img": "dados/",
+        "audio": "dados/caetano.wav",
+        "latitude": -23.566864,
+        "longitude": -46.394653,
+        "texto": "",
+        "categoria": "Festa"
+    },
+    {
+        "img": "dados/churrasco.jpg",
         "audio": "dados/ze_vaqueiro.wav",
         "latitude": -23.538467,
         "longitude": -46.419772,
@@ -95,11 +96,91 @@
         "categoria": "Festa"
     },
     {
-        "img": "dados/festa",
+        "img": "dados/",
+        "audio": "dados/racionais_mcs.wav",
+        "latitude": -23.567489,
+        "longitude": -46.401222,
+        "texto": "",
+        "categoria": "Festa"
+    },
+    {
+        "img": "dados/festa.jpg",
         "audio": "dados/funk_moto.wav",
         "latitude": -23.538036,
         "longitude": -46.42015,
         "texto": "",
         "categoria": "Festa"
+    },
+    {
+        "img": "dados/",
+        "audio": "dados/forró.wav",
+        "latitude": -23.538225,
+        "longitude": -46.414939,
+        "texto": "",
+        "categoria": "Festa"
+    },
+    {
+        "img": "dados/",
+        "audio": "dados/churros.wav",
+        "latitude": -23.541547,
+        "longitude": -46.409953,
+        "texto": "",
+        "categoria": "Trabalho"
+    },
+    {
+        "img": "dados/",
+        "audio": "dados/acougue.wav",
+        "latitude": -23.54135,
+        "longitude": -46.416939,
+        "texto": "",
+        "categoria": "Trabalho"
+    },
+    {
+        "img": "dados/",
+        "audio": "dados/ovos.wav",
+        "latitude": -23.534425,
+        "longitude": -46.399586,
+        "texto": "",
+        "categoria": "Trabalho"
+    },
+    {
+        "img": "dados/",
+        "audio": "dados/carregador_shopp_trem.wav",
+        "latitude": -23.539008,
+        "longitude": -46.425219,
+        "texto": "",
+        "categoria": "Trabalho"
+    },
+    {
+        "img": "dados/guaianases_terra_vermelha.jpg",
+        "audio": "dados/pescada.wav",
+        "latitude": -23.54215,
+        "longitude": -46.413575,
+        "texto": "Guaianases: terra vermelha",
+        "categoria": "Trabalho"
+    },
+    {
+        "img": "dados/",
+        "audio": "dados/gas_agua.wav",
+        "latitude": -23.562617,
+        "longitude": -46.392803,
+        "texto": "",
+        "categoria": "Trabalho"
+    },
+    {
+        "img": "dados/",
+        "audio": "dados/pururuca_shopp_trem.wav",
+        "latitude": -23.544839,
+        "longitude": -46.407,
+        "texto": "",
+        "categoria": "Trabalho"
+    },
+    {
+        "img": "dados/igreja_santa_cruz.jpg",
+        "audio": "dados/.wav",
+        "latitude": -23.545786,
+        "longitude": -46.411211,
+        "texto": "Igreja Santa Cruz",
+        "categoria": "Local"
     }
 ]
