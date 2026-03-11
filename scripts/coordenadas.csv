@@ -1,0 +1,24 @@
+local,longitude,latitude,arquivo_imagem,arquivo_audio,categoria
+Pedreira Lageado," 46°25'5.01""O"," 23°33'19.65""S",pedreira_lageado.jpg,aguas_pedreira,Local
+GuaianaCity: um mundo,"46°25'21.63""O"," 23°32'21.11""S",guaianacity_um_mundo.jpg,,Local
+Moradia: um sonho sem teto," 46°25'13.75""O"," 23°32'18.64""S",em_construcao.jpg,pedreiros,Local
+A Rua da Feira," 46°24'46.96""O"," 23°32'19.73""S",feira_pagar.jpg,feira_livre_guaianases,Local
+A xepa," 46°24'44.13""O"," 23°32'18.67""S",feira_lutar.jpg,feira_livre_guaianases,Local
+Nos trilhos," 46°24'56.20""O","23°32'32.35""S",nos_trilhos.jpg,bem_vindo_a_guaianases,Local
+EE Guerra Junqueiro," 46°23'37.79""O"," 23°33'52.73""S",ee_guerra.jpg,guerra_capoeira,Local
+EE Cosme de Faria Major," 46°25'9.50""O"," 23°32'19.04""S",ee_cosme.jpg,jogo_major,Local
+EE Cosme de Faria Major," 46°25'9.50""O"," 23°32'19.04""S",jogo_major.jpg,jogo_major,Local
+," 46°24'44.06""O"," 23°34'11.50""S",,funk,Festa
+," 46°23'40.75""O"," 23°34'0.71""S",,caetano,Festa
+Alegria: uma herança afrodiaspórica," 46°25'11.18""O"," 23°32'18.48""S",churrasco,ze_vaqueiro,Festa
+," 46°24'4.40""O"," 23°34'2.96""S",,racionais_mcs,Festa
+," 46°25'12.54""O","23°32'16.93""S",festa,funk_moto,Festa
+," 46°24'53.78""O","23°32'17.61""S",,forró,Festa
+," 46°24'35.83""O"," 23°32'29.57""S",,churros,Trabalho
+," 46°25'0.98""O"," 23°32'28.86""S",,açougue,Trabalho
+," 46°23'58.51""O"," 23°32'3.93""S",,ovos,Trabalho
+," 46°25'30.79""O"," 23°32'20.43""S",,carregador_shopp_trem,Trabalho
+Guaianases: terra vermelha," 46°24'48.87""O"," 23°32'31.74""S",guaianases_terra_vermelha,pescada,Trabalho
+,"46°23'34.09""O"," 23°33'45.42""S",,gas_agua,Trabalho
+," 46°24'25.20""O"," 23°32'41.42""S",,pururuca_shopp_trem,Trabalho
+Igreja Santa Cruz," 46°24'40.36""O"," 23°32'44.83""S",igreja_santa_cruz,,Local

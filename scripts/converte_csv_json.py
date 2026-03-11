@@ -33,8 +33,8 @@ def convert_csv_to_json(input_file, output_file):
         
         for row in reader:
             print(row)
-            lat_str = row['Latitude (Y)'].strip()
-            long_str = row['Longitude (X)'].strip()
+            lat_str = row['latitude'].strip()
+            long_str = row['longitude'].strip()
 
             if lat_str is None or lat_str == "":
                 print(f"lat/lon vazio. Pulando entrada {row}")
@@ -42,13 +42,12 @@ def convert_csv_to_json(input_file, output_file):
 
             
             entry = {
-                "img": f"dados/{row['Imagem'].strip()}",
-                "audio": f"dados/{row['Áudio'].strip()}.wav", # Adding .wav extension
+                "img": f"dados/{row['arquivo_imagem'].strip()}",
+                "audio": f"dados/{row['arquivo_audio'].strip()}.wav", # Adding .wav extension
                 "latitude": dms_to_decimal(lat_str),
                 "longitude": dms_to_decimal(long_str),
-                # "texto": row['Descrição'].strip(),
-                "texto": row['LOCAL'].strip(),
-                "categoria": row['Categoria']
+                "texto": row['local'].strip(),
+                "categoria": row['categoria']
             }
             data_list.append(entry)
             
@@ -56,7 +55,7 @@ def convert_csv_to_json(input_file, output_file):
         json.dump(data_list, f, indent=4, ensure_ascii=False)
 
 if __name__ == "__main__":
-    arquivo_entrada = "input.csv"
+    arquivo_entrada = "coordenadas.csv"
     arquivo_saida = "../dados.json"
     convert_csv_to_json(arquivo_entrada, arquivo_saida)
     print(f"Dados convertidos. Resultados em {arquivo_saida}")
